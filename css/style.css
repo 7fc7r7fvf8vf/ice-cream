@@ -10,6 +10,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+img {
+    max-width: 100%;
+}
+
 .wrapper {
     min-height: 100%;
 }
@@ -524,7 +528,7 @@ h6 {
     overflow: hidden;
 }
 
-.avatar__img {
+.avatars__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -547,7 +551,7 @@ h6 {
     display: block;
     width: 10px;
     height: 10px;
-    background: url(../img/Group\ \(7\).svg);
+    background: url(../img/Group\ \(7\).svg) center/contain no-repeat;
     position: absolute;
     top: 0;
     left: 0;
@@ -567,19 +571,62 @@ h6 {
 
 }
 
-.avatars {}
+.avatars {
+    padding: 0px 40px;
+    position: relative;
+    max-width: 260px;
+}
 
-.avatars__ctrls {}
+.avatars__ctrls {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: space-between;
+}
 
-.avatars__ctrl {}
+.avatars__ctrl {
+    width: 14px;
+    height: 14px;
+}
 
-.avatars__ctrl-pic {}
+.avatars__ctrl-left {
+    transform: scale(-1, 1);
+}
 
-.avatars__ctrl-pic_rotate_left {}
+.avatars__ctrl-right {}
 
-.avatars__list {}
+.avatars__ctrl-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
-.avatars__item {}
+
+
+.avatars__list {
+    display: flex;
+    column-gap: 27px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.avatars__item {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+}
+
+.avatars__item.active {
+    width: 58px;
+    height: 58px;
+    border: 1px solid #D64374;
+
+}
 
 .avatars__img {}
 
